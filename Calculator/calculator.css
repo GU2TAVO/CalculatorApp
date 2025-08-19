@@ -1,0 +1,94 @@
+body {
+    display: flex;               /*fix invalid 'center' to flex*/
+    justify-content: center;     /*center horizontally*/
+    align-items: center;         /*center vertically*/
+    min-height: 100vh;           /*full viewport height*/
+    margin: 0;
+    background-color: gray;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+#calculatorDisplay { 
+    width: 100%; /*Makes the display take full width of its parent container*/
+    max-width: 300px;
+    height: 30px; /*Increases height to make numbers more visible*/
+    font-size: 20px; /**Larger font size for better readability*/
+    text-align: right; /*Aligns text to the right side*/
+    padding: 15px; /*Adds space inside the display*/
+    border: none; /*Removes default browser borders*/
+    border-radius: 8px; /*Gives slightly rounded corners*/
+    background-color: white; /*Dark background to mimic a digital screen*/
+    color: grey; /*White text for contrast and visibility*/
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 55px;
+    margin-top: 45px;
+
+}
+
+.calculator p {
+    color: white;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.calculator {
+    position: relative;          /* remove invalid 'center' */
+    top: -40px;                     /* reset top */
+    left: -6px;                    /* reset left */
+    transform: none;            /* reset transform */
+    width: 45vw;
+    max-width: 350px;
+    background: black;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    height: 60vh;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+    height: 65px;
+}
+
+.buttons button {
+    width: 25%;
+    height: 65px;
+    font-size: 20px;
+    margin: 15px;
+    background: orangered;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
+}
+.buttons button:hover {
+    background: #3a3a3a;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .calculator {
+        width: 90vw;
+        /* no positioning needed, flex on body will center */
+    }
+
+    .buttons button {
+        width: 22%;
+        height: 45%;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .calculator {
+        width: 350px;
+    }
+}
